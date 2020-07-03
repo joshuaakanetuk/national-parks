@@ -3,9 +3,9 @@ const api = "sR5HKTDhcCuMpFI0TOCuakykfMJvzWEV10oL0agb";
 
 function createRenderString(obj) {
     let parkArray = [];
-
+    console.log(obj);
     parkArray = obj.data.map(park => {
-        return `<li><h1>${park.name}</h1><p>${park.description}</p><a href="${park.url}">Link</a></li>`
+        return `<li><h1>${park.name}</h1><p>${park.addresses[1].line1}<br>${(park.addresses[1].line2) ? park.addresses[1].line2  + "<br>" : ""}${park.addresses[1].city + " " + park.addresses[1].stateCode+ ", " +park.addresses[1].postalCode}</p><p>${park.description}</p><a href="${park.url}">Link</a></li>`
     });
     return parkArray;
 }
