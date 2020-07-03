@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 auto;
+  height: 100%;
+  font-family: "Inter var", system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  background-color: #202020;
+  color: white;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  max-height: auto;
+}
+
+h2 {
+  margin-bottom: 2px;
+}
+
+a {
+  color: white;
+}
+
+small {
+}
+
+.loading {
+}
+
+.hidden {
+  display: none;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+#states {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(226, 232, 240);
+  border-radius: 8px;
+  border: rgb(46, 123, 224) 1px solid;
+  box-sizing: border-box;
+  color: rgb(74, 85, 104);
+  height: 40px;
+  margin: 0px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  width: 384px;
+}
+
+input[type="number"] {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(226, 232, 240);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(74, 85, 104);
+  height: 40px;
+  margin: 0px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  width: 80px;
+}
+
+input[type="submit"] {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(226, 232, 240);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(74, 85, 104);
+  height: 40px;
+  margin: 0px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  width: 80px;
+}
