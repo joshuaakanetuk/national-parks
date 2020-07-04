@@ -39,13 +39,21 @@ function init() {
 
         })
             .then(response => response.json())
-            .then(data => createRenderString(data))
+        .then(data => {
+            if(data.total === "0") {
+                throw 'No data found.'; 
+            }
+            else {
+                createRenderString(data)
+            }
+        })
             .then(str => {
                 $('.loading').toggleClass('hidden');
                 renderResults(str);
             })
             .catch((error) => {
                 alert('Error getting parks.');
+                 $('.loading').toggleClass('hidden');
             });
     })
 }
