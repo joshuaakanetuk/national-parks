@@ -27,7 +27,7 @@ function createRequestString(arr) {
     return arrString;
 }
 
-function init() {
+function watchForm() {
     // $("#states").load("states.html");
     $('form').on('submit', function (e) {
 
@@ -51,15 +51,13 @@ function init() {
             })
             .then(str => {
                 $('#results').toggleClass('hidden');
-                $('.loading').toggleClass('hidden');
                 renderResults(str);
             })
             .catch((error) => {
                 alert('Error getting parks.');
                 $('#results').toggleClass('hidden');
-                $('.loading').toggleClass('hidden');
             });
     })
 }
 
-$(init)
+$(watchForm)
