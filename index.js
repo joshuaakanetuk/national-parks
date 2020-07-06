@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const url = "https://developer.nps.gov/api/v1/parks?"
+const url = "https://developer.nps.gov/api/v1/parks?";
 const api = "sR5HKTDhcCuMpFI0TOCuakykfMJvzWEV10oL0agb";
 
 function createRenderString(obj) {
@@ -33,7 +33,7 @@ function init() {
 
         e.preventDefault();
         $('#results-list').html('');
-        $('.loading').toggleClass('hidden');
+        $('#results').toggleClass('hidden');
         fetch(`${url}${createRequestString($('#states').val())}limit=${$('#max').val()}&api_key=${api}`, {
             headers: {
                 'accept': 'application/json',
@@ -50,11 +50,13 @@ function init() {
                 }
             })
             .then(str => {
+                $('#results').toggleClass('hidden');
                 $('.loading').toggleClass('hidden');
                 renderResults(str);
             })
             .catch((error) => {
                 alert('Error getting parks.');
+                $('#results').toggleClass('hidden');
                 $('.loading').toggleClass('hidden');
             });
     })
